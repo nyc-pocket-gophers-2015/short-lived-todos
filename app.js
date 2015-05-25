@@ -31,8 +31,7 @@ TodoApp.view.showTasks = function(){
 
 TodoApp.view.handleNewTaskEvent = function(event){
   var input = document.getElementById('new_task');
-  var text = input.value;
-  TodoApp.controller.createTask(text);
+  TodoApp.controller.createTask(input.value);
   input.value = '';
 };
 
