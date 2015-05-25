@@ -21,9 +21,8 @@ TodoApp.controller.removeTask = function (text) {
 /*view */
 TodoApp.view.showTasks = function(){
   var html = "";
-  TodoApp.tasks.forEach(function(ele, index){
-    html += '<li>' + (index +1) + '. '  + 
-    ele + ' <button data-task-text="'+ ele +
+  TodoApp.tasks.forEach(function(ele){
+    html += '<li>' + ele + ' <button data-task-text="'+ ele +
     '">remove</button></li>';
   });
   document.getElementById('task_list').innerHTML = html;
