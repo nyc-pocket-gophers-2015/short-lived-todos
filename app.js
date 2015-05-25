@@ -8,18 +8,18 @@ var TodoApp = {
 /* controller stuff follows */
 TodoApp.controller.createTask = function (text) {
  TodoApp.tasks.push(text);
- TodoApp.view.indexTasks();
+ TodoApp.view.showTasks();
 };
 
 TodoApp.controller.removeTask = function (text) {
   TodoApp.tasks = TodoApp.tasks.filter(function(ele){
     return ele != text;
   });
- TodoApp.view.indexTasks();
+ TodoApp.view.showTasks();
 };
 
 /*view */
-TodoApp.view.indexTasks = function(){
+TodoApp.view.showTasks = function(){
   var html = "";
   TodoApp.tasks.forEach(function(ele, index){
     html += '<li>' + (index +1) + '. '  + 
